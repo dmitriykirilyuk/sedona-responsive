@@ -1,0 +1,73 @@
+.form-promo {
+  position: relative;
+  width: auto;
+  height: 64px;
+  padding: 47px 20px;
+  background: #e1eff7 url("../img/photo-background@1x.jpg") no-repeat 0 45%;
+  background-size: 100% 100%;
+
+  &__text-sedona {
+    display: block;
+    margin: 0 auto;
+    width: 174.26px;
+    height: 30.41px;
+    fill: #fff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 27px;
+    background-image: url("../img/bg-promo-bottom.png");
+    background-size: 100% 27px;
+  }
+}
+
+@media (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: url("../img/photo-background@2x.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .form-promo {
+    height: 141px;
+    padding-top: 101px;
+    padding-bottom: 48px;
+    background: #e1eff7 url("../img/photo-background@1x.jpg") no-repeat 0 81%;
+    background-size: 100%;
+
+    &__text-sedona {
+      width: 457.05px;
+      height: 77.98px;
+    }
+
+    &::after {
+      height: 37px;
+      background-image: url("../img/bg-promo-bottom-tablet.png");
+      background-size: 100% 37px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .form-promo {
+    height: 151px;
+    background: #e1eff7 url("../img/photo-background@1x.jpg") no-repeat 0 70%;
+    background-size: 100% 800px;
+
+    &::after {
+      height: 57px;
+      bottom: -2px;
+      background-size: 100% 57px;
+    }
+
+    &__text-sedona {
+      margin: 0;
+      margin-left: 30.6%;
+    }
+  }
+}

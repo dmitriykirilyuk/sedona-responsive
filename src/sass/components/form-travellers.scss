@@ -1,0 +1,295 @@
+.form-travellers {
+  padding: 18px 0 0;
+  @include border-bottom;
+
+  &__title {
+    text-align: center;
+    @include form-title;
+    margin-bottom: 9px;
+    margin-left: 9.7%;
+    margin-top: 17px;
+  }
+
+  &__input-title {
+    display: block;
+    padding-left: 20px;
+    line-height: 26px;
+    margin-bottom: 7px;
+
+      &--number {
+        padding: 0;
+        text-align: center;
+      }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 13px 41px 14px 17px;
+    margin-bottom: 15px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    border: 4px solid #f2f2f2;
+    font-size: 18px;
+    font-family: "PT Sans", "Arial", sans-serif;
+
+      &:hover {
+        background-color: #e5e5e5;
+        border-color: #e5e5e5;
+      }
+
+      &:focus {
+        background-color: #fff;
+      }
+
+      &--number {
+        height: 58px;
+        padding: 17px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      &--counterfield {
+        display: inline-block;
+        position: relative;
+        padding: 11px 41px 13px 16px;
+        width: 51%;
+        height: 58px;
+        vertical-align: top;
+        margin-right: 10px;
+        margin-bottom: 38px;
+      }
+  }
+
+  &__details {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__details::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &__details-left {
+    width: 60px;
+    float: left;
+  }
+
+  &__details-right {
+    width: 76%;
+    float: right;
+  }
+
+  &__details-left,
+  &__details-right {
+      margin-bottom: 10px;
+  }
+
+  &__counter {
+    position: relative;
+    font-size: 0;
+    min-width: 120px;
+    max-width: 420px;
+
+
+    &::after {
+      content: "чел.";
+      position: absolute;
+      top: 15px;
+      right: 32%;
+      font-size: $fsize-title;
+      font-weight: $fweight-text;
+      line-height: 26px;
+      color: #b8b8b8;
+      text-transform: lowercase;
+    }
+
+    input[value="2"] {
+      font-size: $fsize-title;
+      font-weight: $fweight-title;
+      line-height: 26px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .form-travellers {
+    padding: 0 0 56px;
+    border-bottom: none;
+
+    &__title {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 23px;
+      margin-top: 0;
+      position: relative;
+      font-size: 21px;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        left: 7.6%;
+      }
+
+      &::before {
+        right: 7.6%;
+      }
+    }
+
+    &__input{
+      margin-bottom: 0;
+
+      &-title {
+        font-size: $fsize-text;
+
+        &--top {
+          padding-left: 0;
+        }
+      }
+
+      &--counterfield {
+        width: 40%;
+        height: 58px;
+        padding: 1% 1% 1% 8%;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-align: center;
+
+      }
+
+      &--number {
+        height: 58px;
+      }
+    }
+
+    &__block-counter {
+      width: 31.43%;
+      margin: 0 auto;
+      margin-bottom: 28px;
+    }
+
+    &__counter {
+
+      margin: 0 auto;
+      font-size: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+    &__details {
+      margin-bottom: 19px;
+      font-size: 0;
+    }
+
+    &__details-left,
+    &__details-right {
+      display: inline-block;
+    }
+
+    &__details-left {
+      width: 60px;
+    }
+
+    &__details-right {
+      width: 90.6%;
+    }
+
+    &__block {
+      display: inline-block;
+      width: 32.11%;
+      margin-left: 1.20%;
+      vertical-align: top;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+
+  .form-travellers {
+
+    &__title {
+
+      &::after,
+      &::before {
+        width: 277px;
+      }
+
+      &::after {
+        left: 10%;
+      }
+
+      &::before {
+        right: 10%;
+      }
+    }
+
+    &__input {
+
+      &--counterfield {
+        width: 51%;
+        height: 58px;
+        padding: 1% 1% 1% 7%;
+        text-align: left;
+      }
+    }
+
+    &__block-counter {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__input-title {
+
+      &--top {
+        width: 87.5%;
+        padding-left: 24px;
+      }
+    }
+
+    &__counter {
+      width: 94%;
+      margin: 0;
+      text-align: left;
+
+      &::after {
+        display: block;
+        top: 17px;
+        right: 32%;
+      }
+    }
+
+    &__details-right {
+      width: 92.9%;
+    }
+
+    &__block {
+      width: 23.6%;
+      margin-left: 0;
+      margin-right: 7%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--long {
+        width: 31.1%;
+      }
+    }
+  }
+
+}

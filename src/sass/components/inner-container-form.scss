@@ -1,0 +1,15 @@
+.inner-container-form {
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .inner-container-form {
+    padding: 0 7.55%;
+  }
+}
+
+@media (min-width: 960px) {
+  .inner-container-form {
+    padding: 0 10%;
+  }
+}

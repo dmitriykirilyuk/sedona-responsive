@@ -1,0 +1,84 @@
+.social-buttons {
+  margin-bottom: 43px;
+  font-size: 0;
+
+    &__icon {
+      display: inline-block;
+      width: 46px;
+      height: 48px;
+      position: relative;
+      vertical-align: top;
+      margin-right: 6px;
+      background-color: #81b3d2;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          background-color: #669ec0;
+        }
+
+        &:active {
+          background-color: #5496bd;
+        }
+    }
+
+    &__icon:active &__icon-twitter,
+    &__icon:active &__icon-facebook,
+    &__icon:active &__icon-youtube {
+      fill: #88b6d1;
+    }
+
+    &__icon-twitter {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -9px;
+      margin-top: -7px;
+      width: 19px;
+      height: 15px;
+    }
+
+    &__icon-facebook {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -5px;
+      margin-top: -10px;
+      width: 9px;
+      height: 19px;
+    }
+
+    &__icon-youtube {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -10px;
+      margin-top: -7px;
+      width: 20px;
+      height: 14px;
+    }
+
+    &__icon-twitter:active,
+    &__icon-facebook:active,
+    &__icon-youtube:active {
+      opacity: 0.3;
+    }
+}
+
+@media (min-width: 768px) {
+  .social-buttons {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .social-buttons {
+    box-sizing: border-box;
+    padding-right: 1.5%;
+  }
+}

@@ -1,0 +1,88 @@
+.main-footer {
+  padding: 35px 20px 13px;
+  text-align: center;
+
+    &__hashtag {
+      margin-bottom: 36px;
+      font-size: 21px;
+      font-weight: $fweight-title;
+      line-height: 26px;
+    }
+
+    &__partners {
+      position: relative;
+      padding: 0 6px 8px 9px;
+      text-align: left;
+      line-height: 26px;
+
+        &-logo {
+          position: absolute;
+          left: 74%;
+          bottom: 2px;
+          width: 27px;
+          height: 34px;
+
+          &:hover {
+            fill: #81b3d2;
+          }
+
+          &:active {
+            fill: #b2b2b2;
+          }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+  .main-footer {
+    padding: 4.5% 7% 4.6% 7.1%;
+    font-size: 0;
+
+      &__hashtag,
+      &__partners  {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.3%;
+      }
+
+      &__partners {
+        padding: 0;
+        text-align: right;
+        padding-right: 20px;
+        box-sizing: border-box;
+        font-size: $fsize-text;
+        line-height: 48px;
+
+        &-logo {
+          left: 96%;
+          bottom: 7px;
+        }
+      }
+
+      &__hashtag {
+        width: 32.2%;
+        margin-bottom: 0;
+        text-align: left;
+        line-height: 48px;
+      }
+  }
+}
+
+@media (min-width: 960px) {
+  .main-footer {
+    padding: 3% 5% 1% 7.1%;
+
+    &__hashtag {
+      box-sizing: border-box;
+      padding-left: 4%;
+    }
+
+    &__partners {
+      padding-right: 14px;
+
+      &-logo {
+        left: 99%;
+      }
+    }
+  }
+}

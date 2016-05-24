@@ -1,0 +1,154 @@
+.form-impression {
+  padding: 17px 0 11px;
+  border-bottom: 1px solid #e5e5e5;
+
+  &__title {
+    margin-bottom: 4px;
+    margin-left: 13%;
+    margin-top: 17px;
+    text-align: center;
+    @include form-title;
+  }
+
+  &__input-title {
+    position: relative;
+    display: block;
+    padding-left: 78px;
+    line-height: 56px;
+    margin-bottom: 13px;
+    font-size: $fsize-title;
+    font-weight: $fweight-title;
+    text-transform: none;
+  }
+
+  &__input {
+    position: relative;
+    display: none;
+
+    &+label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      border: 17px solid #f2f2f2;
+      cursor: pointer;
+    }
+
+    &:checked+label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #000;
+      border: 17px solid #f2f2f2;
+    }
+
+    &:hover:checked+label::before {
+      border-color: #e5e5e5;
+      background-color: #000;
+    }
+
+    &:active:checked+label::before {
+      border-color: #d5d5d5;
+      background-color: #a4a4a4;
+    }
+
+    &:hover+label::before {
+      border-color: #e5e5e5;
+      background-color: #e5e5e5;
+    }
+
+    &:active+label::before {
+      border-color: #d5d5d5;
+      background-color: #d5d5d5;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .form-impression {
+    padding: 0 0 53px;
+    font-size: 0;
+    border-bottom: none;
+
+    &__title{
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 40px;
+      font-size: 21px;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        left: 7.6%;
+      }
+
+      &::before {
+        right: 7.6%;
+      }
+    }
+    &__block{
+      display: inline-block;
+      vertical-align: top;
+      width: 40%;
+      margin-right: 20%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__input-title {
+      padding-left: 76px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media (min-width: 960px) {
+  .form-impression {
+
+    &__block {
+      width: 38%;
+      margin-left: 18%;
+      margin-right: 0;
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+
+    &__title{
+
+      &::after,
+      &::before {
+        width: 277px;
+      }
+
+      &::after {
+        left: 10%;
+      }
+
+      &::before {
+        right: 10%;
+      }
+    }
+  }
+}

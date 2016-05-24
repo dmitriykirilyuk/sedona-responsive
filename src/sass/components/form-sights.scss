@@ -1,0 +1,177 @@
+.form-sights {
+  padding: 18px 0 27px;
+  @include border-bottom;
+
+  &__title {
+    margin-left: 12.5%;
+    margin-top: 17px;
+    margin-bottom: 5px;
+    text-align: center;
+    @include form-title;
+  }
+
+  &__input {
+    display: none;
+
+    &+label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 56px;
+      height: 56px;
+      background-color: #f2f2f2;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    &:checked+label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 56px;
+      height: 56px;
+      background: #f2f2f2 url("../img/checkbox-yes.png") no-repeat 50% 50%;
+      border-radius: 3px;
+    }
+
+    &-title {
+      position: relative;
+      display: block;
+      padding-left: 80px;
+      line-height: 56px;
+
+      font-size: $fsize-title;
+      font-weight: $fweight-title;
+      text-transform: none;
+
+    }
+
+    &:hover:checked+label::before {
+      background-color: #e5e5e5;
+      background-image: url("../img/checkbox-yes-hover.png");
+    }
+
+    &:active:checked+label::before {
+      background-color: #a4a4a4;
+      background-image: url("../img/checkbox-yes-active.png");
+    }
+
+    &:hover+label::before {
+      border-color: #e5e5e5;
+      background-color: #e5e5e5;
+    }
+
+    &:active+label::before {
+      border-color: #d5d5d5;
+      background-color: #d5d5d5;
+    }
+  }
+
+  &__block {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+  }
+
+  &__left-block {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-sights {
+    padding: 0 3px 34px;
+    border-bottom: none;
+
+    &__title {
+      width: 100%;
+      position: relative;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 42px;
+      font-size: 21px;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        left: 7.6%;
+      }
+
+      &::before {
+        right: 7.6%;
+      }
+    }
+
+    &__center-block {
+      width: 71%;
+      margin: 0 auto;
+      font-size: 0;
+    }
+
+    &__block {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 31px;
+
+      &:nth-child(odd) {
+        margin-right: 14.51%;
+      }
+    }
+
+    &__left-block,
+    &__right-block{
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+.form-sights {
+  padding: 0 3px 11px;
+
+  &__title {
+
+    &::after,
+    &::before {
+      width: 277px;
+    }
+
+    &::after {
+      left: 10%;
+    }
+
+    &::before {
+      right: 10%;
+    }
+  }
+
+  &__center-block {
+    width: 100%;
+  }
+
+  &__block {
+    margin-right: 14%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__right-block {
+    text-align: right;
+  }
+ }
+}

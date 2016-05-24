@@ -1,0 +1,137 @@
+.counter-btn {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 60px;
+  height: 58px;
+  margin-right: 6px;
+  padding: 0;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:active {
+      background-color: #d5d5d5;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--minus::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      left: 50%;
+      margin-left: -10px;
+      width: 20px;
+      height: 4px;
+      border-radius: 1px;
+      background-color: #b8b8b8;
+    }
+
+    &--minus:hover::after {
+      background-color: #8c8c8c;
+    }
+
+    &--minus:active::after {
+      background-color: #c4c4c4;
+    }
+
+    &--plus::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      left: 50%;
+      margin-left: -10px;
+      width: 20px;
+      height: 4px;
+      border-radius: 1px;
+      background-color: #b8b8b8;
+
+    }
+
+    &--plus:hover::after {
+      background-color: #8c8c8c;
+    }
+
+    &--plus:active::after {
+      background-color: #c4c4c4;
+    }
+
+    &--plus::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      left: 50%;
+      margin-left: -10px;
+      width: 20px;
+      height: 4px;
+      border-radius: 1px;
+      background-color: #b8b8b8;
+      transform: rotate(90deg);
+    }
+
+    &--plus:hover::before {
+      background-color: #8c8c8c;
+    }
+
+    &--plus:active::before {
+      background-color: #c4c4c4;
+    }
+}
+
+@media (min-width: 768px) {
+  .counter-btn {
+    margin-right: 0;
+    width: 46px;
+
+    &--minus::after {
+      margin-left: -3px;
+    }
+
+    &--plus::before {
+      margin-left: -18px;
+    }
+
+    &--plus::after {
+      margin-left: -18px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+
+  .counter-btn {
+    &--minus {
+      width: 60px;
+      height: 58px;
+      margin-right: 8px;
+
+      &:after {
+        margin-left: -8px;
+      }
+    }
+
+    &--plus {
+      width: 60px;
+      height: 58px;
+      margin-left: 6px;
+
+      &:before {
+        margin-left: -9px;
+      }
+
+      &:after {
+        margin-left: -9px;
+      }
+    }
+  }
+}

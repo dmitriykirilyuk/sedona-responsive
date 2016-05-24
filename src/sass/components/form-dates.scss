@@ -1,0 +1,213 @@
+.form-dates {
+  padding: 17px 0 8px;
+  @include border-bottom;
+
+  &__title {
+    margin-bottom: 5px;
+    margin-left: 19%;
+    margin-top: 17px;
+    text-align: center;
+    @include form-title;
+  }
+
+  &__input-title {
+    display: block;
+    margin-bottom: 7px;
+    padding-left: 21px;
+    line-height: 26px;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 13px 41px 13px 17px;
+    border: 4px solid #f2f2f2;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    font-size: 18px;
+    font-family: "PT Sans", "Arial", sans-serif;
+
+      &:hover {
+        background-color: #e5e5e5;
+        border-color: #e5e5e5;
+      }
+
+      &:focus {
+        background-color: #fff;
+      }
+
+      &--counterfield {
+        display: inline-block;
+        position: relative;
+        width: 51%;
+        height: 58px;
+        vertical-align: top;
+        margin-right: 6px;
+      }
+
+      &--disabled {
+        padding: 15px 43px 15px 19px;
+        border: 2px solid #b8b8b8;
+
+        &:hover {
+          background-color: #f2f2f2;
+          border-color: #b8b8b8;
+        }
+
+      }
+  }
+
+  &__counter {
+    position: relative;
+    min-width: 120px;
+    max-width: 420px;
+    font-size: 0;
+
+
+    input[value="14"] {
+      font-size: $fsize-title;
+      font-weight: $fweight-title;
+      line-height: 26px;
+    }
+
+      &::after {
+        content: "дн.";
+        position: absolute;
+        top: 16px;
+        right: 32%;
+        font-size: $fsize-title;
+        font-weight: $fweight-text;
+        line-height: 26px;
+        color: #b8b8b8;
+        text-transform: lowercase;
+      }
+  }
+}
+
+@media (min-width: 768px) {
+  .form-dates {
+    padding: 0 0 66px;
+    font-size: 0;
+    border-bottom: none;
+
+    &__title {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 25px;
+      font-size: 21px;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        left: 7.6%;
+      }
+
+      &::before {
+        right: 7.6%;
+      }
+    }
+
+    &__block {
+      display: inline-block;
+      vertical-align: top;
+      width: 27.02%;
+      margin-right: 9.4%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__input {
+      margin-bottom: 0;
+
+      &--counterfield {
+        width: 47%;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding: 1% 0% 1% 6%;
+        text-align: center;
+      }
+
+      &--disabled {
+        padding: 15px 43px 15px 19px;
+      }
+    }
+
+    &__input-title{
+      margin-bottom: 6px;
+      font-size: $fsize-text;
+    }
+
+    &__counter {
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .form-dates {
+
+    &__input {
+
+      &--counterfield {
+        height: 58px;
+        width: 51%;
+        text-align: left;
+      }
+
+      &-title {
+        padding-left: 22px;
+
+        &--padding {
+          padding-left: 46px;
+        }
+      }
+    }
+
+    &__counter {
+      text-align: left;
+
+      &::after {
+        display: block;
+        right: 32%;
+      }
+    }
+
+    &__title {
+
+      &::after,
+      &::before {
+        width: 277px;
+      }
+
+      &::after {
+        left: 10%;
+      }
+
+      &::before {
+        right: 10%;
+      }
+
+    }
+
+    &__block {
+      width: 28.9%;
+      margin-right: 6.6%;
+    }
+  }
+}

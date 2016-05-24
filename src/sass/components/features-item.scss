@@ -1,0 +1,270 @@
+.features-item {
+  text-align: center;
+  background-color: #81b3d2;
+  color: #fff;
+
+    &__home,
+    &__food,
+    &__souvenir {
+      position: absolute;
+    }
+
+    &__home {
+      top: -7px;
+      left: -47px;
+      width: 37px;
+      height: 37px;
+    }
+
+    &__food {
+      top: -4px;
+      left: -50px;
+      width: 37px;
+      height: 35px;
+    }
+
+    &__souvenir {
+      top: -11px;
+      left: -47px;
+      width: 32px;
+      height: 38px;
+    }
+
+    &__title {
+      position: relative;
+      margin: 0;
+      margin-bottom: 8px;
+      font-size: $fsize-title;
+      font-weight: $fweight-title;
+      line-height: 26px;
+
+        &--home, &--food, &--souvenir  {
+          margin-bottom: 14px;
+        }
+    }
+
+    &__number {
+      position: relative;
+      display: block;
+      margin-bottom: 15px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        width: 9px;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      &::before {
+        left: 50%;
+        margin-left: -27px;
+      }
+
+      &::after {
+        right: 50%;
+        margin-right: -27px;
+      }
+
+      &--grey::after,
+      &--grey::before {
+        background-color: #a8a8a8;
+      }
+
+      &--grey {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__text {
+      margin: 0;
+
+      &--grey {
+        color: #333333;
+      }
+    }
+
+    &__picture {
+      width: 100%;
+      height: 256px;
+      background-color: #7a8139;
+
+      img {
+        width: 100%;
+        height: 256px;
+      }
+    }
+
+    &--black {
+      margin-bottom: 29px;
+      text-align: left;
+      background-color: #fff;
+      color: #000;
+    }
+
+    &--grey {
+      padding: 27px 0px;
+      background-color: #eeeeee;
+      color: #333333;
+      border-bottom: 1px solid #d6d6d6;
+
+        &:last-child {
+          border-bottom: none;
+        }
+    }
+
+    &__title--black {
+      color: #000;
+    }
+}
+
+@media (min-width: 768px) {
+
+  .features-item {
+
+    &__souvenir,
+    &__home,
+    &__food {
+      top: 0;
+      left: 50%;
+    }
+
+    &__home {
+      margin-left: -37px;
+      width: 75px;
+      height: 72px;
+    }
+
+    &__food {
+      top: 2px;
+      margin-left: -38px;
+      width: 74px;
+      height: 70px;
+    }
+
+    &__souvenir {
+      top: -3px;
+      margin-left: -33px;
+      width: 64px;
+      height: 76px;
+    }
+
+    &--width {
+      height: 256px;
+    }
+
+    &__text {
+      font-size: $fsize-text;
+      word-wrap: break-word;
+    }
+
+    &__picture {
+      overflow: hidden;
+
+      img {
+        height: auto;
+      }
+    }
+
+    &__title {
+      position: relative;
+      margin-bottom: 10px;
+      font-size: $fsize-btn;
+
+      &--black {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &--home, &--food, &--souvenir  {
+        padding-top: 99px;
+        margin-bottom: 21px;
+      }
+
+      &--reverse {
+        width: 90%;
+        padding-left: 5%;
+      }
+    }
+
+    &--black {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      width: 33.3%;
+      padding: 0 5.8%;
+      margin-bottom: 0;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    &__picture {
+      float: right;
+      width: 66.7%;
+
+      &--reverse {
+        float: left;
+      }
+    }
+
+    &--grey {
+      display: inline-block;
+      vertical-align: top;
+      width: 33.3%;
+      padding: 0 5.7%;
+      box-sizing: border-box;
+      border-bottom: 0;
+      font-size: 0;
+    }
+
+    &__number {
+      font-size: $fsize-text;
+      margin-bottom: 22px;
+    }
+
+  }
+}
+
+@media (min-width: 960px) {
+  .features-item {
+
+    &__title {
+      width: 62%;
+      margin-left: auto;
+      margin-right: auto;
+
+      &--reverse {
+        padding-left: 0;
+      }
+
+      &--black {
+        width: 60%;
+      }
+    }
+
+    &--black {
+      padding: 0px 4.8%;
+    }
+
+    &__number {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+
+      &--reverse {
+        width: 97%;
+      }
+    }
+  }
+}

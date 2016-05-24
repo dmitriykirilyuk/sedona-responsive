@@ -1,0 +1,10 @@
+.footer-container {
+  width: 150px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    width: 100%;
+  }
+}

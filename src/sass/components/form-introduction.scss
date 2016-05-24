@@ -1,0 +1,134 @@
+.form-introduction {
+  padding-top: 18px;
+  padding-bottom: 11px;
+  @include border-bottom;
+
+  &__title {
+    margin-bottom: 14px;
+    margin-left: 8.78%;
+    margin-top: 17px;
+    text-align: center;
+    @include form-title;
+  }
+
+  &__input-title {
+    display: block;
+    padding-left: 21px;
+    margin-bottom: 6px;
+    line-height: 26px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 13.5px 17px;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border: 4px solid #f2f2f2;
+    font-size: 18px;
+    font-family: "PT Sans", "Arial", sans-serif;
+
+    &:hover {
+      background-color: #e5e5e5;
+      border-color: #e5e5e5;
+    }
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  &__red-star {
+    color: $star-color;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-introduction {
+    padding-top: 0;
+    padding-bottom: 52px;
+    font-size: 0;
+    border-bottom: none;
+
+    &__title{
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 24px;
+      position: relative;
+      font-size: 21px;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 50%;
+        margin-top: -1px;
+        background-color: #dbdbdb;
+      }
+      &::after {
+        left: 7.6%;
+      }
+
+      &::before {
+        right: 7.6%;
+      }
+    }
+
+    &__input-title {
+      padding-left: 23px;
+      margin-bottom: 7px;
+      font-size: $fsize-text;
+    }
+
+    &__block {
+      display: inline-block;
+      vertical-align: top;
+      width: 27.3%;
+      margin-right: 9.04%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .form-introduction {
+    padding-bottom: 50px;
+
+    &__input {
+      padding: 12px 17px;
+      line-height: 26px;
+    }
+
+    &__title{
+
+      &::after,
+      &::before {
+        width: 277px;
+      }
+
+      &::after {
+        left: 10%;
+      }
+
+      &::before {
+        right: 10%;
+      }
+    }
+
+    &__block {
+      width: 28.9%;
+      margin-right: 6.6%;
+    }
+
+    &__input-title {
+      padding-left: 21px;
+    }
+  }
+}

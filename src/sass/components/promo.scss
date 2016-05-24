@@ -1,0 +1,124 @@
+.promo {
+  position: relative;
+  padding: 47px 0;
+  background: #e1eff7 url("../img/photo-background@1x.jpg") no-repeat 0 0;
+  background-size: 100% 800px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+      height: 27px;
+      background-image: url("../img/bg-promo-bottom.png");
+      background-repeat: no-repeat;
+      background-size: 100% 27px;
+    }
+
+    &__text-welcome,
+    &__text-tothegorgeous,
+    &__text-sedona,
+    &__text-becausecanyon {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__text-welcome {
+      width: 144px;
+      height: 35px;
+      margin-bottom: 6px;
+    }
+
+    &__text-tothegorgeous {
+      width: 196px;
+      height: 24px;
+      margin-bottom: 61px;
+      fill: #766357;
+    }
+
+    &__text-sedona,
+    &__text-becausecanyon {
+      fill: #fff;
+    }
+
+    &__text-sedona {
+      width: 280px;
+      height: 48px;
+      margin-bottom: 66px;
+    }
+
+    &__text-becausecanyon {
+      width: 196px;
+      height: 54px;
+    }
+}
+@media (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: url("../img/photo-background@2x.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .promo {
+    position: relative;
+    padding: 76px 0 83px;
+
+    background-size: 100% 512px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 37px;
+        background-image: url("../img/bg-promo-bottom-tablet.png");
+        background-repeat: no-repeat;
+        background-size: 100% 37px;
+      }
+
+      &__text-welcome {
+        width: 188px;
+        height: 45px;
+        margin-bottom: 10px;
+      }
+
+      &__text-tothegorgeous {
+        width: 256px;
+        height: 30px;
+        margin-bottom: 54px;
+      }
+
+      &__text-sedona {
+        width: 457px;
+        height: 80px;
+        margin-bottom: 55px;
+      }
+
+      &__text-becausecanyon {
+        width: 296px;
+        height: 80px;
+      }
+  }
+}
+
+@media (min-width: 960px) {
+  .promo {
+
+    padding-bottom: 79px;
+
+    &__text-tothegorgeous {
+      margin-bottom: 52px;
+    }
+
+    &__text-becausecanyon {
+      margin: 0;
+      margin-left: 37%;
+    }
+
+  &::after {
+    bottom: -2px;
+    height: 56px;
+    background-size: 100% 56px;
+    }
+  }
+}

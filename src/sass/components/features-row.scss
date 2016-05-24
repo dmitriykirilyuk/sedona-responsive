@@ -1,0 +1,16 @@
+.features-row {
+  padding: 38px 20px 7px 70px;
+}
+
+@media (min-width: 768px) {
+  .features-row {
+    font-size: 0;
+    padding: 7.7% 0 8%;
+  }
+}
+
+@media (min-width: 960px) {
+  .features-row {
+    padding: 4.9% 0 6.9%;
+ }
+}

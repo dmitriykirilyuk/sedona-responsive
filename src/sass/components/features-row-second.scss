@@ -1,0 +1,17 @@
+.features-row-second {
+  background-color: #eeeeee;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .features-row-second {
+    font-size: 0;
+    padding: 5.87% 0 2%;
+  }
+}
+
+@media (min-width: 960px) {
+  .features-row-second {
+    padding: 3.8% 0 5.5%;
+  }
+}

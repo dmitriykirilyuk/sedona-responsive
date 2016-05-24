@@ -1,0 +1,293 @@
+.form-photo {
+  padding-top: 16px;
+
+  &__input-title {
+    position: relative;
+    display: block;
+    padding-bottom: 75px;
+    text-align: center;
+    @include form-title;
+
+      &::after {
+        content: "ВЫБРАТЬ ФОТОГРАФИИ";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 26px;
+        padding: 16px 0;
+        background-color: #f2f2f2;
+        color: #d2d2d2;
+        cursor: pointer;
+      }
+
+      &:hover::after {
+        background-color: #e5e5e5;
+        color: #8c8c8c;
+      }
+
+      &:active::after {
+        background-color: #d5d5d5;
+        color: #afafaf;
+      }
+  }
+
+  &__input-btn-testimonials {
+    width: 100%;
+    margin-bottom: 80px;
+    padding: 16px 20px;
+    background-color: #81b3d2;
+    border: none;
+    font-size: $fsize-btn;
+    font-weight: $fweight-title;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    font-family: "PT Sans", "Arial", sans-serif;
+
+    &:active {
+      background-color: darken(#81b3d2, 40%);
+    }
+  }
+
+  &__input-btn-upload {
+    display: none;
+    font-family: "PT Sans", "Arial", sans-serif;
+  }
+
+  &__upload-photo {
+    width: 280px;
+    margin: 0 auto;
+    padding: 55px 0 48px;
+    font-size: 0;
+  }
+
+  &__mini-photo {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    vertical-align: top;
+    font-size: 0;
+    margin-bottom: 35px;
+    margin-right: 12.5%;
+    margin-left: 0;
+
+      &--circle {
+        position: absolute;
+        display: block;
+        top: -15px;
+        left: 50%;
+        margin-left: -15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+
+        &:hover {
+          background-color: #e5e5e5;
+        }
+
+        &:active {
+          background-color: #d5d5d5;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -8px;
+          width: 16px;
+          height: 3px;
+          transform: rotate(45deg);
+          background-color: #bababa;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -8px;
+          width: 16px;
+          height: 3px;
+          transform: rotate(-45deg);
+          background-color: #bababa;
+        }
+
+        &:hover::before,
+        &:hover::after {
+          background-color: #8c8c8c;
+        }
+
+        &:active::before,
+        &:active::after {
+          background-color: #c4c4c4;
+        }
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+  }
+}
+
+@media (min-width: 768px) {
+  .form-photo {
+    padding-top: 0;
+
+    &__input-title {
+      font-size: 21px;
+      padding-bottom: 115px;
+
+        &::after {
+          left: 50%;
+          width: 70%;
+          margin-left: -35%;
+        }
+    }
+
+    &__btn-block {
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 9.5%;
+        margin-top: -1px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        left: 0;
+      }
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &__mini-photo {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 68px;
+      margin-left: 0;
+      margin-right: 11.2%;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--circle {
+        width: 60px;
+        height: 60px;
+        left: 100%;
+        margin-left: -30px;
+        top: -30px;
+
+        &::before,
+        &::after {
+          width: 30px;
+          height: 4px;
+          margin-left: -15px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__mini-text {
+      font-size: $fsize-text;
+      line-height: 26px;
+    }
+
+    &__upload-photo {
+      width: 88.76%;
+      padding-top: 87px;
+      padding-bottom: 28px;
+    }
+
+    &__input-btn-testimonials {
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 105px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .form-photo {
+
+    &__btn-block {
+      position: relative;
+    }
+
+    &__input-title {
+
+      &::after {
+        content: "ПЕРЕТАЩИТЕ ФОТОГРАФИИ СЮДА";
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        background-color: #81b3d2;
+        color: #fff;
+      }
+
+      &:hover::after,
+      &:active::after {
+        background-color: #81b3d2;
+        color: #fff;
+      }
+    }
+
+    &__input-btn-testimonials {
+      width: 47.7%;
+      margin-bottom: 69px;
+    }
+
+    &__upload-photo {
+      width: 100%;
+      padding-top: 88px;
+      padding-bottom: 30px;
+    }
+
+    &__mini-photo {
+      margin-right: 6.75%;
+
+      &:nth-child(3n) {
+        margin-right: 6.75%;
+      }
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
+
+    &__btn-block {
+
+      &:after,
+      &:before {
+        width: 277px;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin border-bottom {
+  -webkit-border-bottom: 1px solid #d6d6d6;
+  -moz-border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+@mixin form-title {
+  font-size: $fsize-title;
+  font-weight: $fweight-title;
+  line-height: 26px;
+}
